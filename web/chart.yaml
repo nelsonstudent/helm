@@ -1,3 +1,4 @@
+# chart principal
 apiVersion: v2
 name: web
 version: 0.1.0
