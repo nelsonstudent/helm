@@ -56,10 +56,11 @@ helm install my-release . -f values.yaml
 Isso irá instalar:
 
 Um ConfigMap do chart web com o valor de global.environment
-
 Um Deployment do subchart postfix com replicaCount e nodeSelector.environment.core herdados do pai
 
+
 ---
+
 
 🧪 3. Resultado Esperado
 O Deployment do subchart será renderizado com:
@@ -79,7 +80,9 @@ E o ConfigMap do chart pai será renderizado como:
 data:
   env: "production"
 
+
 ---  
+
   
 🧠 4. Conceitos Envolvidos
 Conceito	Descrição
@@ -90,15 +93,25 @@ Values.yaml	Valores de configuração dos charts
 global:	Bloco especial que permite compartilhar variáveis entre pai e filhos
 
 
+---
+
 ✅ 5. Teste e Remoção
 Para testar novamente:
 
 helm uninstall my-release
 helm install my-release . -f values.yaml
+
+
+---
+
+
 📝 Observações
 A estrutura pode ser usada como base para projetos maiores com múltiplos serviços.
 
 O uso de global é opcional, mas útil para padrões corporativos e valores comuns.
+
+
+---
 
 
 📌 Requisitos
