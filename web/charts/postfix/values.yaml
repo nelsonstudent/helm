@@ -1,0 +1,6 @@
+# valores do subchart
+replicaCount: 1  # pode ser sobrescrito pelo chart pai
+
+nodeSelector:
+  environment:
+    core: dev  # será sobrescrito se vier do pai
