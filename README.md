@@ -72,11 +72,15 @@ spec:
       nodeSelector:
         environment:
           core: production
-E o ConfigMap do chart pai será renderizado como:
 
+          
+E o ConfigMap do chart pai será renderizado como:
 
 data:
   env: "production"
+
+---  
+  
 🧠 4. Conceitos Envolvidos
 Conceito	Descrição
 Chart	Pacote Helm de uma aplicação
@@ -84,6 +88,7 @@ Subchart	Chart incluído como dependência
 Dependências	Declaradas no Chart.yaml com dependencies:
 Values.yaml	Valores de configuração dos charts
 global:	Bloco especial que permite compartilhar variáveis entre pai e filhos
+
 
 ✅ 5. Teste e Remoção
 Para testar novamente:
@@ -95,12 +100,8 @@ A estrutura pode ser usada como base para projetos maiores com múltiplos servi�
 
 O uso de global é opcional, mas útil para padrões corporativos e valores comuns.
 
+
 📌 Requisitos
 Helm 3.x
-
 Kubernetes (Minikube, Kind, ou cluster real)
 
-📚 Referências
-Helm Docs – Dependency Management
-
-Helm Docs – Values Files
