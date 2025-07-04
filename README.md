@@ -42,7 +42,7 @@ Um subchart que simula a instalação de um serviço como o Postfix, com suporte
 
 ### Passo 1: Atualizar dependências
 
-Entre na pasta `web` e execute:
+Entre na pasta `web` e execute o comando abaixo. Isso garante que o Helm baixe os charts dependentes corretamente para a pasta charts/.
 
 ```
 cd web
@@ -52,6 +52,8 @@ helm dependency update
 ---
 
 ### Passo 2: Instalar com Helm
+
+Após o comando mencioando no passo 1 da instalação, digitar:
 
 helm install my-release . -f values.yaml
 
@@ -112,6 +114,25 @@ helm uninstall my-release
 helm install my-release . -f values.yaml
 ```
 
+---
+
+---
+
+## 🛠️ Dicas para Contribuidores
+
+### 💡 Sobre os Templates
+
+Os arquivos localizados em `templates/` e `charts/postfix/templates/` usam o mecanismo de template do Helm (Go templates). Algumas dicas:
+
+- Use `{{ .Values.<param> }}` para acessar valores definidos no `values.yaml`
+- Para acessar valores do chart pai em um subchart, use prefixos como `{{ .Values.<subchart>.algumaCoisa }}`
+
+Exemplo no subchart:
+
+```yaml
+replicas: {{ .Values.replicaCount }}  # Local ao subchart
+# ou
+replicas: {{ .Values.postfix.replicaCount }}  # Se definido no pai
 
 
 ---
