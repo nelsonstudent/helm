@@ -62,24 +62,26 @@ Um Deployment do subchart postfix com replicaCount e nodeSelector.environment.co
 ---
 
 
-🧪 3. Resultado Esperado
+## 📌 3. Resultado Esperado
+
 O Deployment do subchart será renderizado com:
 
-
+```yaml
 spec:
   replicas: 2
   template:
     spec:
       nodeSelector:
-        environment: 
+        environment:
           core: production
+```
 
-
-          
 E o ConfigMap do chart pai será renderizado como:
 
+```yaml
 data:
   env: "production"
+```
 
 
 ---  
