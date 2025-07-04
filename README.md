@@ -48,7 +48,9 @@ Entre na pasta `web` e execute:
 cd web
 helm dependency update
 
-✅ Passo 2: Instalar com Helm
+---
+
+### Passo 2: Instalar com Helm
 
 helm install my-release . -f values.yaml
 
@@ -63,9 +65,7 @@ Um Deployment do subchart postfix com replicaCount e nodeSelector.environment.co
 🧪 3. Resultado Esperado
 O Deployment do subchart será renderizado com:
 
-yaml
-Copiar
-Editar
+
 spec:
   replicas: 2
   template:
@@ -75,9 +75,7 @@ spec:
           core: production
 E o ConfigMap do chart pai será renderizado como:
 
-yaml
-Copiar
-Editar
+
 data:
   env: "production"
 🧠 4. Conceitos Envolvidos
@@ -91,9 +89,6 @@ global:	Bloco especial que permite compartilhar variáveis entre pai e filhos
 ✅ 5. Teste e Remoção
 Para testar novamente:
 
-bash
-Copiar
-Editar
 helm uninstall my-release
 helm install my-release . -f values.yaml
 📝 Observações
