@@ -47,11 +47,11 @@ Entre na pasta `web` e execute:
 ```bash
 cd web
 helm dependency update
-Passo 2: Instalar com Helm
-bash
-Copiar
-Editar
+
+✅ Passo 2: Instalar com Helm
+
 helm install my-release . -f values.yaml
+
 Isso irá instalar:
 
 Um ConfigMap do chart web com o valor de global.environment
