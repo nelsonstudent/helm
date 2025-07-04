@@ -24,10 +24,6 @@ helm-example/
 │ │ └── templates/
 │ │ └── deployment.yaml
 
-yaml
-Copiar
-Editar
-
 ---
 
 ## 📦 1. Sobre os Charts
