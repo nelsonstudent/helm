@@ -44,7 +44,6 @@ Um subchart que simula a instalação de um serviço como o Postfix, com suporte
 
 Entre na pasta `web` e execute:
 
-```bash
 cd web
 helm dependency update
 
