@@ -67,11 +67,17 @@ O Deployment do subchart será renderizado com:
 
 
 spec:
+
   replicas: 2
+  
   template:
+  
     spec:
+    
       nodeSelector:
+      
         environment:
+        
           core: production
 
           
