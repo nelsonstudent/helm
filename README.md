@@ -87,37 +87,45 @@ data:
 ---  
 
   
-🧠 4. Conceitos Envolvidos
-Conceito	Descrição
-Chart	Pacote Helm de uma aplicação
-Subchart	Chart incluído como dependência
-Dependências	Declaradas no Chart.yaml com dependencies:
-Values.yaml	Valores de configuração dos charts
-global:	Bloco especial que permite compartilhar variáveis entre pai e filhos
+## 🧠 4. Conceitos Envolvidos
+
+| Conceito     | Descrição                                                                 |
+|--------------|---------------------------------------------------------------------------|
+| Chart        | Pacote Helm de uma aplicação                                              |
+| Subchart     | Chart incluído como dependência                                           |
+| Dependências | Declaradas no `Chart.yaml` com `dependencies:`                           |
+| Values.yaml  | Valores de configuração dos charts                                        |
+| global       | Bloco especial que permite compartilhar variáveis entre pai e filhos     |
+
 
 
 ---
 
-✅ 5. Teste e Remoção
+## ✅ 5. Teste e Remoção
+
 Para testar novamente:
 
+```bash
 helm uninstall my-release
 helm install my-release . -f values.yaml
 
 
+
 ---
 
-
+**
 📝 Observações
 A estrutura pode ser usada como base para projetos maiores com múltiplos serviços.
 
-O uso de global é opcional, mas útil para padrões corporativos e valores comuns.
+O uso de global é opcional, mas útil para padrões corporativos e valores comuns.**
 
 
 ---
 
 
-📌 Requisitos
-Helm 3.x
-Kubernetes (Minikube, Kind, ou cluster real)
+## 📌 Requisitos
+
+- Helm 3.x
+- Kubernetes (Minikube, Kind, ou cluster real)
+
 
