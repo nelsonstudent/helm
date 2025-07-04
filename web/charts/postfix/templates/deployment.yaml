@@ -1,0 +1,15 @@
+# template do subchart
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postfix
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: postfix
+    spec:
+      nodeSelector:
+        environment:
+          core: {{ .Values.nodeSelector.environment.core }}
