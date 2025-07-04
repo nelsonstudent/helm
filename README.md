@@ -67,18 +67,13 @@ O Deployment do subchart será renderizado com:
 
 
 spec:
-
   replicas: 2
-  
   template:
-  
     spec:
-    
       nodeSelector:
-      
-        environment:
-        
+        environment: 
           core: production
+
 
           
 E o ConfigMap do chart pai será renderizado como:
