@@ -108,6 +108,7 @@ Para testar novamente:
 ```bash
 helm uninstall my-release
 helm install my-release . -f values.yaml
+```
 
 
 
