@@ -2,7 +2,7 @@
 global:
   environment: production
 
-meceap-postfix:
+postfix:
   replicaCount: 2
   nodeSelector:
     environment:
