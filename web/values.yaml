@@ -1,0 +1,9 @@
+# valores do chart pai
+global:
+  environment: production
+
+meceap-postfix:
+  replicaCount: 2
+  nodeSelector:
+    environment:
+      core: production
